@@ -1,0 +1,78 @@
+@import '~antd/dist/antd.css';
+
+
+#components-layout-demo-side .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+  }
+
+  .searchbardiv{
+    background:lightgoldenrodyellow;
+    height:80px;
+    padding-bottom:20px;
+}
+.searchbar{
+    width:500px; 
+    padding-top: 4px;
+    }
+
+  .ordform{
+    width:800px;
+    height:800px;
+    padding-top:35px;
+    display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  }  
+  .recreq{
+    width:100%;
+    height:220px;
+    background: wheat;
+    image-resolution: 0dpi;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 50px;
+    padding-top:50px;
+}
+.load{
+  height: 500px;
+  padding: 200px 270px;
+
+}
+.dropd{
+  background:lightblue;
+  width:1100px;
+}
+.baswal{
+  background: blue;
+}
+
+.addstocka{
+  background:pink;
+  height:50px;
+  width:100%;
+  padding: 15px 45%;
+}
+.form{
+  background: white;
+  float: left;
+  width: 500px;
+  
+}
+.draft{
+  width: 500px;
+  border: solid;
+  
+}
+h1{
+  float: center;
+}
+
+.div[style].ant-modal{
+  width:1000px !important;
+}
+
+.shipperbut{
+  margin-left:100px;
+}

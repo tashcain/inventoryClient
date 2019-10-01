@@ -1,0 +1,37 @@
+.location{
+    height:500px;
+    background:yellow;
+    display: grid;
+    grid-template-rows: 30% 70%;
+}
+
+.location span{
+    font-size: 50px;
+    margin-left:40%;
+}
+
+.sec{
+    height: 300px;
+    background: wheat;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.sec1{
+    
+    height: 100%;
+
+}
+
+.sec1 h1{
+    margin-left:40%;
+}
+
+.sec2 h1{
+    margin-left:40%;
+}
+
+.button{
+    margin-left:40%;
+}

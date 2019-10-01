@@ -1,0 +1,119 @@
+.Bar{
+    background: rgb(250, 249, 249);
+    height: 300px;
+    display: grid;
+    grid-template-columns: 550px 200px;
+    grid-gap: 35px;
+}
+.type{
+    display: grid;
+    grid-template-rows: 50px 150px;
+    grid-gap: 1px;
+}
+
+.dailyact{
+    height:100%;
+    font-size: 30px;
+}
+
+.typeOps{
+    background: rgb(250, 249, 249)ink;
+    height: 200px;
+    width:100%;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 1px;
+}
+
+.section1{
+    background:wheat;
+    height:120px;
+    width: 120px;
+    border: solid;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left:80px;
+}
+
+.section1 h1{
+    font-size:35px;
+    padding-top:15%;
+}
+.section1 span{
+    font-size:20px;
+}
+
+
+
+.section2{
+    background:wheat;
+    height:120px;
+    width: 120px;
+    border: solid;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left:80px;
+}
+.section2 h1{
+    font-size:35px;
+    padding-top:15%;
+}
+
+.section2 span{
+    font-size:20px;
+}
+
+.section3{
+    background:wheat;
+    height:120px;
+    width: 120px;
+    border: solid;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left:80px;
+}
+
+.section3 h1{
+    font-size:35px;
+    padding-top:15%;
+}
+.section3 span{
+    font-size:20px;
+}
+
+.graph{
+    height: 100px;
+    width: 100%;   
+    margin-top: 50px;
+    float:right;
+
+}
+
+.tables{
+    margin-top:20px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+}
+
+.rigtab{
+    border:solid;
+    border-radius: 10px;
+    width:70%;
+    margin-left:14%;
+    height:200px;
+}
+.leftab{
+    border:solid;
+    border-radius: 10px;
+    width:70%;
+    height:200px;
+}
+
+.orderTable{
+    border: solid;
+    border-radius: 10px;
+    width:78%;
+    margin-left:7%;
+}
