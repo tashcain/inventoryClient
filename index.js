@@ -30,10 +30,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
+// app.get('/', (req, res) => {
 
-  res.send('hello')
-})
+//   res.send('hello')
+// })
 
 //  Zalo.find({},function(err, abcd){
 //   if(err){
