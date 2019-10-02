@@ -12,7 +12,9 @@ class Deltable extends Component{
         super(Props);
         this.state = {
             items:[],
-            isLoaded: false
+            isLoaded: false,
+            placorder: [],
+            totorder: null
         }
     }
 
@@ -20,9 +22,16 @@ class Deltable extends Component{
         fetch('http://localhost:3001/users')
         .then(res => res.json())
         .then(json => {
+          let placorder=[]
+          for(var i =0;i<json.length;i++){
+              if( json[i].status === 0 || json[i].status === 1){
+                  placorder.push(json[i])
+              }
+            }
+
           let newarr = []
           console.log(json);
-          for(var i =0;i<json.length;i++){
+          for( i =0;i<json.length;i++){
             if(json[i].status === 2){
               newarr.push(json[i])
             }
@@ -32,6 +41,8 @@ class Deltable extends Component{
             this.setState({
                 isLoaded: true,
                 items: newarr,
+                placorder: placorder,
+                totorder: json.length
             })
         });
     }
@@ -46,7 +57,7 @@ class Deltable extends Component{
         else{
         
             return(
-            <div className='App'>
+            <div className='tabo'>
             <Table dataSource={items}>
      <Column title="productId" dataIndex="productId" key="productId" />
       <Column title="Delivery Location" dataIndex="deliveryLocation" key="lastName" />
@@ -64,6 +75,28 @@ class Deltable extends Component{
     />
     
   </Table> 
+  <div className="tabr">
+       <div className="headtext ddtdt" >
+         Overview
+         
+       </div>
+       <div className="headtext">
+         Orders Today 
+         <p>{this.state.totorder}</p>
+       </div>
+       <div className="headtext">
+         Pending Order 
+         <p>{this.state.placorder.length}</p>
+       </div>
+       <div className="headtext">
+         Delivered 
+         <p>{this.state.items.length}</p>
+       </div>
+       <div className="headtext">
+         Cancelled 
+         <p>0</p>
+       </div> 
+     </div>
      </div>
         )
       }}

@@ -4,7 +4,8 @@ class Response extends  Component{
     constructor(Props){
         super(Props);
         this.state = {
-            response:null
+            response:null,
+            response_col:null
         }
 
     }
@@ -16,18 +17,21 @@ class Response extends  Component{
         .then(json => {
            if(json.status === 0){
                this.setState({
-                   response: "order has been placed no response till now"
+                   response: "order has been placed no response till now",
+                   response_col: "response_red"
                })
            }
            else{
                if(json.status === 1){
                    this.setState({
-                       response: "order received under process"
+                       response: "order received under process",
+                       response_col: "response_green"
                    })
                }
                else{
                    this.setState({
-                       response: "order status 2"
+                       response: "order has been delivered",
+                       response_col: "response_darkgreen"
                    })
                }
            }
@@ -38,7 +42,7 @@ class Response extends  Component{
 
     render(){
         return(
-            <div>{this.state.response}</div>
+            <div className={this.state.response_col}>{this.state.response}</div>
         )
     }
 }

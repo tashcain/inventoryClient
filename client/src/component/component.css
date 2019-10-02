@@ -76,3 +76,60 @@ h1{
 .shipperbut{
   margin-left:100px;
 }
+
+.response_red{
+  background: rgb(255, 22, 81);
+  height: 50px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 20px;
+  
+}
+
+.response_green{
+  background: greenyellow;
+  height: 50px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.response_darkgreen{
+  background: green;
+  height: 50px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 20px;
+}
+.tabo{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+}
+
+
+
+.tabr{
+  display: grid;
+  grid-template-rows: 70px 100px 100px 100px 100px;
+  grid-gap: 10px;
+  background: rgb(245, 241, 241);
+}
+
+.headtext{
+  font-size: 20px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.headtext p{
+  font-size: 40px;
+
+}
+
+.ddtdt{
+  text-align: left;
+}

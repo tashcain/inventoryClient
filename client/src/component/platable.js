@@ -12,6 +12,7 @@ class RecTable extends Component{
         this.state = {
             items:[],
             isLoaded: false,
+            totorder: null,
             delorder: [],
             placorder: []
         }
@@ -22,9 +23,10 @@ class RecTable extends Component{
         fetch('http://localhost:3001/users')
         .then(res => res.json())
         .then(json => {
-            let placorder=[]
+          
+          let placorder=[]
             for(var i =0;i<json.length;i++){
-                if(json[i].status === 0 || json[i].status === 1){
+                if( json[i].status === 0 || json[i].status === 1){
                     placorder.push(json[i])
                 }
               }
@@ -38,7 +40,8 @@ class RecTable extends Component{
                 isLoaded: true,
                 items: placorder,
                 delorder: delorder,
-                placorder: placorder
+                placorder: placorder,
+                totorder: json.length
             })
         });
         
@@ -55,7 +58,7 @@ class RecTable extends Component{
         else{
           console.log(items)
             return(
-            <div className='App'>
+            <div className='tabo'>
             <Table dataSource={items}>
      <Column title="productId" dataIndex="productId" key="productId" />
       <Column title="Delivery Location" dataIndex="deliveryLocation" key="lastName" />
@@ -73,7 +76,30 @@ class RecTable extends Component{
     />
     
   </Table> 
+  <div className="tabr">
+       <div className="headtext ddtdt" >
+         Overview
+         
+       </div>
+       <div className="headtext">
+         Orders Today 
+         <p>{this.state.totorder}</p>
+       </div>
+       <div className="headtext">
+         Pending Order 
+         <p>{this.state.placorder.length}</p>
+       </div>
+       <div className="headtext">
+         Delivered 
+         <p>{this.state.delorder.length}</p>
+       </div>
+       <div className="headtext">
+         Cancelled 
+         <p>0</p>
+       </div> 
      </div>
+     </div>
+     
         )}}
         
         

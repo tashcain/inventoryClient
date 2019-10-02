@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import './component.css';
 
 class Restock extends  Component{
     constructor(Props){
         super(Props);
         this.state = {
-            response:null
+            response:null,
+            response_col:null
         }
 
     }
@@ -16,13 +18,15 @@ class Restock extends  Component{
         .then(json => {
            if(json.status === 0){
                this.setState({
-                   response: "stock has been placed no response till now"
+                   response: "stock has been placed no response till now",
+                   response_col: "response_red"
                })
            }
            else{
                if(json.status === 1){
                    this.setState({
-                       response: "stock received under process"
+                       response: "stock received under process",
+                       response_col: "response_green"
                    })
                }
                else{
@@ -38,7 +42,10 @@ class Restock extends  Component{
 
     render(){
         return(
-            <div>{this.state.response}</div>
+            
+            <div>
+            <div className={this.state.response_col}>{this.state.response}</div>
+                </div>
         )
     }
 }
