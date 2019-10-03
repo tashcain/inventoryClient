@@ -19,7 +19,7 @@ class Stock extends Component{
 
 
 componentDidMount(){
-    fetch('http://localhost:3001/stock')
+    fetch('https://redhare.herokuapp.com/stock')
     .then(res=> res.json())
     .then(json => {
         let stockArr = []
