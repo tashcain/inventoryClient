@@ -44,17 +44,7 @@ const InputGroup = Input.Group;
 const { Option } = Select;
 
 
-// const menu = (
-//   <Menu>
-//     <Menu.Item key="0">
-//       <a href="http://localhost:3006/test1">1st menu item</a>
-//     </Menu.Item>
-//     <Menu.Item key="1">
-//       <a href="">2nd menu item</a>
-//     </Menu.Item>
-//     <Menu.Item key="3">3rd menu item</Menu.Item>
-//   </Menu>
-// );
+
 
 
 class AddStock extends Component {
@@ -115,7 +105,7 @@ async componentDidMount(){
 
 sendData(){
   console.log(this.state);
-  axios.post('http://localhost:5000/stock',{
+  axios.post('http://localhost:3001/stock',{
      comId : this.state.comId,
      comName : this.state.comName,
      prodName :  this.state.prodName,

@@ -20,9 +20,8 @@ class Stock extends Component{
 
 
 componentDidMount(){
-  console.log(config.route);
-  console.log(config);
-    fetch(config.route+'/stock/')
+  // config.route+
+    fetch('http://localhost:3001/stock')
     .then(res=> res.json())
     .then(json => {
         let stockArr = []
@@ -33,7 +32,7 @@ componentDidMount(){
             stock: stockArr,
             isLoaded:true
            }) 
-         console.log(this.state.stockArr)
+         console.log(this.state.stock)
 
          
     });

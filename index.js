@@ -118,25 +118,27 @@ app.post('/gotData', (req, res, next) => {
 })
 
 
-//  app.post('/stock', (req, res) => {
-//   const stock = new Stock({
-//     productId: req.body.productId,
-//   deliveryLocation:req.body.delloc,
-//   phoneNo:req.body.phn,
-//   paymentMode:req.body.paymo,
-//   price:req.body.price,
-//   barcode:req.body.barcode
-//   })
-//   stock.save()
-//    .then(result => {
-//      res.send("hogya save");
-//      console.log(result)
-//    })
-//    .catch(err => {
-//      res.send(err)
-//    })
-// })
-
+app.post('/stock', (req, res) => {
+  const stock = new Stock({
+    comId:req.body.comId,
+    comName:req.body.comName,
+   prodName:req.body.prodName,
+      Color:req.body.Color,
+   Category:req.body.Category,
+     Gender:req.body.Gender,
+       Size:req.body.Size,
+   location:req.body.location
+    
+  })
+    stock.save()
+    .then(result => {
+      res.send("hogya save");
+      console.log(result)
+    })
+    .catch(err => {
+      res.send(err)
+    })
+})
 
 app.get('/users', function (req, res) {
   Test.find({}, function (err, abcd) {
