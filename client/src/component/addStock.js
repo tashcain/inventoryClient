@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Table} from 'antd';
 import {Link} from 'react-router-dom';
 import {reactLocalStorage} from 'reactjs-localstorage';
+import {config} from './config/Config';
 import {
   Form,
   Input,
