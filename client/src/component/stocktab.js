@@ -22,7 +22,7 @@ class Stock extends Component{
 componentDidMount(){
   console.log(config.route);
   console.log(config);
-    fetch(config.route+'/stock')
+    fetch(config.route+'/stock/')
     .then(res=> res.json())
     .then(json => {
         let stockArr = []
