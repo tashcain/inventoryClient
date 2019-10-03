@@ -104,8 +104,8 @@ async componentDidMount(){
 }
 
 sendData(){
-  console.log(this.state);
-  axios.post('http://localhost:3001/stock',{
+  
+  axios.post(config.route+'/stock',{
      comId : this.state.comId,
      comName : this.state.comName,
      prodName :  this.state.prodName,
