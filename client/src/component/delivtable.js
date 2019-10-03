@@ -3,6 +3,7 @@ import { Table,Button} from 'antd';
 import {Link} from 'react-router-dom';
 // import axios from 'axios';
 import './component.css';
+import {config} from './config/Config';
 
 const { Column } = Table;
 
@@ -19,7 +20,7 @@ class Deltable extends Component{
     }
 
     componentDidMount(){
-        fetch('http://localhost:3001/users')
+        fetch(config.route+'/users')
         .then(res => res.json())
         .then(json => {
           let placorder=[]

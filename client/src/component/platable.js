@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Table,Button } from 'antd';
 import {Link} from 'react-router-dom';
 import './component.css';
+import {config} from './config/Config';
 
 const { Column } = Table;
 
@@ -20,7 +21,7 @@ class RecTable extends Component{
     }
 
     componentDidMount(){
-        fetch('http://localhost:3001/users')
+        fetch(config.route+'/users')
         .then(res => res.json())
         .then(json => {
           

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {config} from './config/Config';
 
 class Response extends  Component{
     constructor(Props){
@@ -12,7 +13,7 @@ class Response extends  Component{
     
     componentDidMount(){
         let id = this.props.match.params.id;
-        fetch('http://localhost:3001/order/'+id)
+        fetch(config.route+'/order/'+id)
         .then(res => res.json())
         .then(json => {
            if(json.status === 0){

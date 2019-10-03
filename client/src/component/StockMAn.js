@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import {Card, Col, Badge, Icon, Menu, Row} from 'antd';
 import {Link} from 'react-router-dom';
-
-
-
-
+import {config} from './config/Config';
 
 
 
@@ -16,7 +13,7 @@ class StockMan extends Component {
                 }
       }
       componentDidMount(){
-        fetch('http://localhost:3001/users')
+        fetch(config.route+'/users')
         .then(res => res.json())
         .then(json => {
             this.setState({

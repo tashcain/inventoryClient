@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Table, Button} from 'antd';
 import {Link} from 'react-router-dom';
+import {config} from './config/Config';
 
 const { Column } = Table;
 
@@ -19,7 +20,9 @@ class Stock extends Component{
 
 
 componentDidMount(){
-    fetch('https://redhare.herokuapp.com/stock')
+  console.log(config.route);
+  console.log(config);
+    fetch(config.route+'/stock')
     .then(res=> res.json())
     .then(json => {
         let stockArr = []

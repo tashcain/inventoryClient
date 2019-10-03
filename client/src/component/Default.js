@@ -19,7 +19,7 @@ func(){
 }
 
 componentDidMount(){
-  fetch('http://localhost:3001/users')
+  fetch(config.route+'/users')
   .then(res => res.json())
   .then(json => {
       this.setState({

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './component.css';
+import {config} from './config/Config';
 
 class Restock extends  Component{
     constructor(Props){
@@ -13,7 +14,7 @@ class Restock extends  Component{
     
     componentDidMount(){
         let id = this.props.match.params.id;
-        fetch('http://localhost:3001/stock/'+id)
+        fetch(config.route+'/stock/'+id)
         .then(res => res.json())
         .then(json => {
            if(json.status === 0){

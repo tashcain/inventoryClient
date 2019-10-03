@@ -9,6 +9,7 @@ import {
   } from 'antd';
 import axios from 'axios';
 import './component.css';
+import {config} from './config/Config';
 
 
 // const {TextArea} = Input;
@@ -48,7 +49,7 @@ handlebarcode(value){
 
    
    saveData(){
-    axios.post('http://localhost:3001/gotData',{
+    axios.post(config.route+'/gotData',{
        productId:this.state.productId,
        delloc:this.state.delloc,
        phn:this.state.phn,
