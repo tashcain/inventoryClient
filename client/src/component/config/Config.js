@@ -1,3 +1,3 @@
 module.exports.config = {
-    route:'http://redhare.herokuapp.com'
+    route:'https://redhare.herokuapp.com'
 }
