@@ -119,10 +119,18 @@ sendData(){
 
   })
   .then(res => {
-      console.log(res.data);
+      
+      if(res.data.message === undefined){
+        alert("stock updated successfully");
+      }
+      else{
+        alert(res.data.message);
+      }
+      
   })
   .catch(err => {
       console.log(err);
+      alert(err);
   })
 
   }
@@ -300,7 +308,7 @@ render() {
            </span>}>
       <Row>
     <Col span={2}></Col>    
-  <Col span={15}><Input id="comId" value={this.state.comId} onChange={this.setvalue}/></Col>
+  <Col span={15}><Input required id="comId" value={this.state.comId} onChange={this.setvalue}/></Col>
 </Row>
     </Form.Item>
     <Form.Item label={<span>
@@ -308,7 +316,7 @@ render() {
            </span>}>
       <Row>
     <Col span={2}></Col>    
-  <Col span={15}><Input id="comName" value={this.state.comName} onChange={this.setvalue}/></Col>
+  <Col span={15}><Input required id="comName" value={this.state.comName} onChange={this.setvalue}/></Col>
 </Row>
     </Form.Item>
     <Form.Item label={<span>
@@ -316,7 +324,7 @@ render() {
            </span>}>
       <Row>
     <Col span={2}></Col>    
-  <Col span={15}><Input id="prodName" value={this.state.prodName} onChange={this.setvalue}/></Col>
+  <Col span={15}><Input required id="prodName" value={this.state.prodName} onChange={this.setvalue}/></Col>
 </Row>
     </Form.Item>
     <Form.Item label={<span>
@@ -324,7 +332,7 @@ render() {
            </span>}>
       <Row>
     <Col span={2}></Col>    
-  <Col span={15}><Input id="Color" value={this.state.Color} onChange={this.setvalue}/></Col>
+  <Col span={15}><Input required id="Color" value={this.state.Color} onChange={this.setvalue}/></Col>
 </Row>
     </Form.Item>
 
@@ -335,7 +343,7 @@ render() {
       <Col span={2}></Col> 
      <InputGroup size="large">
           <Row gutter={8}>
-          <Col span={12}><InputGroup compact>
+          <Col span={12}><InputGroup required compact>
       <Select style={{ width: '200px', marginLeft: '20px' }} defaultValue='Gender' onChange={this.handleGender}>
         <Option value="Male">Male</Option>
         <Option value="Female">Female</Option>
@@ -357,7 +365,7 @@ render() {
       <Col span={2}></Col> 
      <InputGroup size="large">
           <Row gutter={8}>
-          <Col span={12}><InputGroup compact>
+          <Col span={12}><InputGroup required compact>
       <Select style={{ width: '200px', marginLeft: '20px' }} defaultValue='Size' onChange={this.handleSize}>
         <Option value="S">S</Option>
         <Option value="M">M</Option>
@@ -383,7 +391,7 @@ render() {
       <Col span={2}></Col> 
      <InputGroup size="large">
           <Row gutter={8}>
-          <Col span={12}><InputGroup compact>
+          <Col span={12}><InputGroup required compact>
       <Select style={{ width: '200px', marginLeft: '20px' }} defaultValue='APPAREL' onChange={this.handleCategory}>
         <Option value="Tshirt">T-shirt</Option>
         <Option value="Jogger">Jogger</Option>
@@ -399,30 +407,7 @@ render() {
    
 </Row>       
       </Form.Item>
-      {/* <Form.Item label={<span>
-            SubCategory
-          </span>}>
-      <Row>
-     <InputGroup size="large">
-          <Row gutter={8}>
-          <Col span={12}><InputGroup compact>
-      <Select style={{ width: '200px', marginLeft: '20px' }} defaultValue='T-Shirts.' onChange={this.handleSubCategory}>
-        <Option value="apparel">APPAREL</Option>
-        <Option value="110099">110099</Option>
-        <Option value="110088">110088</Option>
-        <Option value="110077">110077</Option>
-        <Option value="shubham">110072</Option>
-      </Select>
-    </InputGroup>
-     </Col>
-    
-          </Row>
-        </InputGroup>
-
-   
-</Row>       
-      </Form.Item> */}
-
+     
       <Form.Item label={<span>
             Location
           </span>}>

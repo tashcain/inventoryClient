@@ -59,7 +59,12 @@ handlebarcode(value){
 
     })
     .then(res => {
-        console.log(res.data);
+      if(res.data.message === undefined){
+        alert("order placed successfully");
+      }
+      else{
+        alert(res.data.message);
+      }
     })
     .catch(err => {
         console.log(err);
@@ -102,23 +107,23 @@ const { Option } = Select;
                </span>}>
           <Row>
         <Col span={2}></Col>    
-      <Col span={8}><Input id="productId" onChange={this.setvalue}/></Col>
+      <Col span={8}><Input required  id="productId" onChange={this.setvalue}/></Col>
     </Row>
         </Form.Item>
           <Form.Item
             label="Delivery Location"
           >
-            {(<Input id="delloc" onChange={this.setvalue} />)}
+            {(<Input required id="delloc" onChange={this.setvalue} />)}
           </Form.Item>
           <Form.Item label="Phone Number">
-              <Input id="phn" onChange={this.setvalue}/>
+              <Input required id="phn" onChange={this.setvalue}/>
          </Form.Item>
           <Form.Item label="Payment Mode">
-            {(<Input id="paymo" onChange={this.setvalue} style={{ width: '100%' }} type= "Email" />)}
+            {(<Input required id="paymo" onChange={this.setvalue} style={{ width: '100%' }}  />)}
           </Form.Item>
           <Form.Item label="Price" type="Number">
             {
-                <Input id="price" onChange={this.setvalue} />
+                <Input required id="price" onChange={this.setvalue} />
               
              
             }

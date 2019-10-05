@@ -4,22 +4,28 @@ const TestSchema = mongoose.Schema({
     
     
     productId:{
-        type:String
+        type:String,
+        required: true
     },
     deliveryLocation:{
-        type:String
+        type:String,
+        required: true
     },
     phoneNo:{
-        type:Number
+        type:Number,
+        required: true
     },
     paymentMode:{
-        type:String
+        type:String,
+        required: true
     },
     price:{
-        type:Number
+        type:Number,
+        required: true
     },
     barcode:{
-        type:String
+        type:String,
+        required: true
     },
     status:{
         type:Number,

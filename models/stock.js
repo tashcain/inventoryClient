@@ -2,28 +2,36 @@ const mongoose = require('mongoose');
 
 const StockSchema = mongoose.Schema({
     comId:{
-        type:String
+        type:String,
+        required: true
     },
     comName:{
-        type:String
+        type:String,
+        required: true
     },
    prodName:{
-    type:String
+    type:String,
+    required: true
    },
       Color:{
-        type:String
+        type:String,
+        required: true
       },
    Category:{
-    type:String
+    type:String,
+    required: true
    },
     Gender :{
-        type:String
+        type:String,
+        required: true
     },
        Size:{
-        type:String
+        type:String,
+        required: true
        },
    location:{
-    type:String
+    type:String,
+    required: true
    },
     status:{
         type:Number,
